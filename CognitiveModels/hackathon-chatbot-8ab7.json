@@ -1,0 +1,215 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "Cancel",
+      "features": []
+    },
+    {
+      "name": "CreateResourceGroupIntent",
+      "features": []
+    },
+    {
+      "name": "ExploreAllFeatures",
+      "features": []
+    },
+    {
+      "name": "GetAllResourceGroupsIntent",
+      "features": []
+    },
+    {
+      "name": "GetResourceGroupDetails",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "ResourceGroupEntity",
+      "children": [],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "utterances": [
+    {
+      "text": "book a hotel in new york",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book a restaurant",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "bye",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "cancel",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "close",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "create a new resource group",
+      "intent": "CreateResourceGroupIntent",
+      "entities": []
+    },
+    {
+      "text": "create a new rg",
+      "intent": "CreateResourceGroupIntent",
+      "entities": []
+    },
+    {
+      "text": "create resource group",
+      "intent": "CreateResourceGroupIntent",
+      "entities": []
+    },
+    {
+      "text": "create resource group in azure",
+      "intent": "CreateResourceGroupIntent",
+      "entities": []
+    },
+    {
+      "text": "create rg",
+      "intent": "CreateResourceGroupIntent",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "explore",
+      "intent": "ExploreAllFeatures",
+      "entities": []
+    },
+    {
+      "text": "explore all chatbot features",
+      "intent": "ExploreAllFeatures",
+      "entities": []
+    },
+    {
+      "text": "explore all features",
+      "intent": "ExploreAllFeatures",
+      "entities": []
+    },
+    {
+      "text": "find an airport near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "get me the details of hackthon resource group",
+      "intent": "GetResourceGroupDetails",
+      "entities": [
+        {
+          "entity": "ResourceGroupEntity",
+          "startPos": 22,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "get me the list of all resource groups in azure",
+      "intent": "GetAllResourceGroupsIntent",
+      "entities": []
+    },
+    {
+      "text": "i'd like to rent a car",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ignore",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "is botrg resource group present in my subscription",
+      "intent": "GetResourceGroupDetails",
+      "entities": [
+        {
+          "entity": "ResourceGroupEntity",
+          "startPos": 3,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "logout",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "show me all resource groups",
+      "intent": "GetAllResourceGroupsIntent",
+      "entities": []
+    },
+    {
+      "text": "show me chatbot-rg resource group",
+      "intent": "GetResourceGroupDetails",
+      "entities": [
+        {
+          "entity": "ResourceGroupEntity",
+          "startPos": 8,
+          "endPos": 17,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "what are the resource groups present in azure",
+      "intent": "GetAllResourceGroupsIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the resource groups present in my subscription",
+      "intent": "GetAllResourceGroupsIntent",
+      "entities": []
+    },
+    {
+      "text": "what can you do",
+      "intent": "ExploreAllFeatures",
+      "entities": []
+    },
+    {
+      "text": "what services you support",
+      "intent": "ExploreAllFeatures",
+      "entities": []
+    },
+    {
+      "text": "winter is coming",
+      "intent": "None",
+      "entities": []
+    }
+  ],
+  "versionId": "0.1",
+  "name": "hackathon-chatbot-8ab7",
+  "desc": "Luis Model for CoreBot",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

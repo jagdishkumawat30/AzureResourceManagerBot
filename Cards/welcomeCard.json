@@ -1,0 +1,55 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Azure Resource Manager Bot",
+          "size": "ExtraLarge",
+          "wrap": true,
+          "weight": "Bolder",
+          "color": "Dark"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Welcome to **Azure Resource Manager**. Manage your Azure resources right from here without going to Azure portal or writing PowerShell scripts.",
+          "wrap": true
+        }
+      ],
+      "style": "good",
+      "bleed": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "title": "Help",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "To use bot services, say something like\n* \"Show me all resource groups\"\n* \"Create a new resource group\"\n* \"Get details about your subscription\"\n\nTo Logout, say something like\n* \"cancel\"\n* \"logout\"\n* \"quit\"\n\nIt is always a good practice to logout after using the services.",
+                "wrap": true,
+                "color": "Dark"
+              }
+            ],
+            "style": "good"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Go to Azure Portal",
+      "url": "https://portal.azure.com/"
+    }
+  ]
+}
