@@ -36,8 +36,6 @@ namespace CoreBot.Utilities
             /*client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));*/ //ACCEPT header
             client.DefaultRequestHeaders.Add("Authorization", "Bearer " + AzureDetails.AccessToken);
 
-
-
             //var requestUri = $"knowledgebases/{knowledgebaseId}/generateAnswer";
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, client.BaseAddress);
             //var body = $"{{\"question\": \"{"symptoms"}\", \"top\": \"{1}\"}}";

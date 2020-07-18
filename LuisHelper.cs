@@ -46,13 +46,6 @@ namespace CoreBot
                 var recognizerResult = await recognizer.RecognizeAsync(turnContext, cancellationToken);                
                 var (intent, score) = recognizerResult.GetTopScoringIntent();
                 AzureDetails.Intent = intent;
-
-                //switch (intent)
-                //{
-                //    case "GetResourceGroupDetails":
-                //        AzureDetails.Entity = recognizerResult.Entities.First.First.Value.ToString();
-                //        break;
-                //}
                 
 
             }

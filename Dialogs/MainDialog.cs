@@ -14,7 +14,6 @@ using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
 using Microsoft.Recognizers.Text.DataTypes.TimexExpression;
 
-using CoreBot.CognitiveModels;
 using Microsoft.Extensions.Configuration;
 using CoreBot.Utilities;
 using CoreBot.Dialogs.ResourceGroup;
@@ -88,11 +87,9 @@ namespace CoreBot.Dialogs
             await LuisHelper.ExecuteLuisQuery(Configuration, Logger, stepContext.Context, cancellationToken);
 
 
-            // In this sample we only have a single Intent we are concerned with. However, typically a scenario
-            // will have multiple different Intents each corresponding to starting a different child Dialog.
             var intentValue = (string)stepContext.Result;
 
-            // Run the BookingDialog giving it whatever details we have from the LUIS call, it will fill out the remainder.
+            
             switch (AzureDetails.Intent)
             {
                 case "GetAllResourceGroupsIntent":
@@ -120,7 +117,7 @@ namespace CoreBot.Dialogs
 
         private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            // If the child dialog ("BookingDialog") was cancelled or the user failed to confirm, the Result here will be null.
+            
             if (stepContext.Result != null)
             {
                 await stepContext.Context.SendActivityAsync(MessageFactory.Text("Thank you for using Azure Resource Manager Bot."), cancellationToken);
